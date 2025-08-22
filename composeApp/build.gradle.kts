@@ -9,6 +9,7 @@ plugins {
     alias(libs.plugins.composeCompiler)
 }
 
+
 kotlin {
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
@@ -32,6 +33,16 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+
+
+            implementation("com.google.maps.android:maps-compose:4.4.1")
+            implementation("com.google.android.gms:play-services-maps:18.2.0")
+            implementation("com.google.accompanist:accompanist-permissions:0.32.0")
+            implementation("androidx.compose.foundation:foundation:1.5.4")
+            implementation("io.coil-kt:coil-compose:2.4.0")
+
+
+
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -42,6 +53,11 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
+
+            implementation("io.coil-kt.coil3:coil-compose:3.0.0-alpha06")
+            implementation("io.coil-kt.coil3:coil-network-ktor:3.0.0-alpha06")
+
+
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
