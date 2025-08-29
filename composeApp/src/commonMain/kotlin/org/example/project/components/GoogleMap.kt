@@ -77,7 +77,23 @@ fun MapSection() {
                 "https://scontent.fcrd3-1.fna.fbcdn.net/v/t39.30808-6/491926740_1354002589534639_6550929795724725756_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=aB_sjb1dlCQQ7kNvwFFiCBF&_nc_oc=Adkb4lVT0RTJVr9QL9H0sVpxXW88_CEjyK7oWbVpbMNSpW6A7zs4xjAI5XlXNShTg0z5VUk83SRMFiBfUysIk6ya&_nc_zt=23&_nc_ht=scontent.fcrd3-1.fna&_nc_gid=BBt5iq-VDr3c165SJOsqsg&oh=00_AfXl3c7LQZ2jm-vI9xoHgPnkcC9X-kSrnksMUbv1JY0_Ow&oe=68A72DF8",
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfYnBa1njk7Wpuq2Q0T-kWJi4NTXXK6xITwsfzyZOuZBjJSddWzavB8OQ2FS5g8XIj5us&usqp=CAU"
             )
+        ),
+
+        PuntoFlora(
+        id = 4,
+        nombre = "Flora Punto 4",
+        posicion = LatLng(-46.42259695025339, -67.52282149074507),
+        descripcion = "Entrada a Caleta Olivia.",
+        imagenes = listOf(
+            "https://caletaweb.com.ar/wp-content/uploads/2019/06/20190825_182913-scaled.jpg",
+            "https://www.pagina12.com.ar/fotos/turismo/20121118/notas_t/lp08fo01.jpg",
+            "https://laopinionaustral.com.ar/media/uploads/2023/09/WhatsApp-Image-2018-06-07-at-10.19.13-1.jpeg"
         )
+    )
+
+
+
+
     )
 
     // Funciones para manejar los clicks de los marcadores
@@ -136,7 +152,7 @@ fun MapSection() {
         // Configuración de la cámara - inicia en coordenada por defecto
         val cameraPositionState = rememberCameraPositionState {
             position = CameraPosition.fromLatLngZoom(
-                LatLng(-46.44192812032652, -67.51754269970981), // Coordenada por defecto (Caleta Olivia)
+                LatLng(-46.44192812032652, -67.51754269970981), // Coordenada por defecto Gorosito
                 14f // Más zoom para ver mejor los detalles
             )
         }
