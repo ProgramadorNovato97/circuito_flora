@@ -1,6 +1,6 @@
 package org.example.project
 
-import FavoritosScreen
+
 import org.example.project.components.FloraScreen
 
 import androidx.compose.foundation.layout.*
@@ -19,6 +19,8 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Preview
 fun App() {
     var selectedTab by remember { mutableStateOf(0) }
+
+    //Lista de navbar
     val items = listOf(
         NavItem("Flora", Icons.Filled.Menu),
         NavItem("Mapa", Icons.Filled.LocationOn),
@@ -45,14 +47,10 @@ fun App() {
                     .fillMaxSize()
                     .padding(paddingValues)
             ) {
-                if (selectedTab == 0) {
-                    FloraScreen()
-                }
-                if (selectedTab == 1) {
-                    MapSection()
-                }
-                if (selectedTab == 2) {
-                    FavoritosScreen()
+                when (selectedTab) {
+                    0 -> FloraScreen()
+                    1 -> MapSection()
+                    2 -> FavoritosScreen()
                 }
             }
         }
@@ -60,6 +58,3 @@ fun App() {
 }
 
 data class NavItem(val title: String, val icon: ImageVector)
-
-
-
